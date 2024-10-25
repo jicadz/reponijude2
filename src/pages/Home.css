@@ -1,0 +1,40 @@
+
+  nav li {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: large;
+  }
+  
+  nav a {
+    color: white;
+    transition: color 0.3s ease; /* Transition for color change */
+  }
+  
+  nav a:hover {
+    color: black; /* Change color on hover */
+  }
+  
+  nav a::after {
+
+    transition: width 0.4s ease, left 0.4s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+@keyframes moveText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust this value for more or less movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.movable {
+    animation: moveText 1s ease-in-out infinite; /* Adjust duration and easing as needed */
+}
